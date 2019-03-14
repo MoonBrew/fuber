@@ -9,11 +9,11 @@ public class Location {
 	/**
 	 * The Distance on the Y-axis.
 	 */
-	private final double longitude;
+	private double longitude;
 	/**
 	 * The Distance on the X-axis.
 	 */
-	private final double latitude;
+	private double latitude;
 	
 	public Location (double aLongitude, double aLatitude) {
 		this.longitude = aLongitude;
@@ -28,5 +28,33 @@ public class Location {
 	 */
 	public static double getDistance(Location a, Location b) {
 		return Math.sqrt(Math.pow(a.longitude - b.longitude, 2) + Math.pow(a.latitude - b.latitude, 2));
+	}
+
+	/**
+	 * @return the longitude
+	 */
+	public double getLongitude() {
+		return longitude;
+	}
+
+	/**
+	 * @return the latitude
+	 */
+	public double getLatitude() {
+		return latitude;
+	}
+
+	/**
+	 * @param longitude the longitude to set
+	 */
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+
+	/**
+	 * @param latitude the latitude to set
+	 */
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
 	}
 }
